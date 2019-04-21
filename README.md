@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)" "[![](https://img.shields.io/github/last-commit/samprohaska/indexTickeR.svg)](https://github.com/samprohaska/indexTickeR/commits/master)"
+![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) ![](https://img.shields.io/github/last-commit/samprohaska/indexTickeR.svg)](https://github.com/samprohaska/indexTickeR/commits/master)
 
 An `R` package for downloading stock index constituents. Focused on non-American indexes for now, as those are mostly covered by `tidy_quant`.
 
