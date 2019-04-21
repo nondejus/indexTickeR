@@ -1,6 +1,8 @@
-An R package for downloading stock index constituents. Focused on non-American indexes, as these are already covered by `tidy_quant`.
+[![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)" "[![](https://img.shields.io/github/last-commit/samprohaska/indexTickeR.svg)](https://github.com/samprohaska/indexTickeR/commits/master)"
 
-Tickers planned:
+An `R` package for downloading stock index constituents. Focused on non-American indexes for now, as those are mostly covered by `tidy_quant`.
+
+*Tickers planned:*
 
 | ticker  	| name                             	|
 |---------	|----------------------------------	|
