@@ -40,7 +40,7 @@ get_BEL20 <- function(do.cache = TRUE,
 
     df.BEL20 <- df.BEL20[[1]]
 
-    colnames(df.BEL20) <- c('company','ICB.sector','ticker','index_weight_percent')
+    colnames(df.BEL20) <- c('company','ICB.sector','ticker','index_weight')
 
     if (do.cache) {
         saveRDS(df.BEL20, cache.file)

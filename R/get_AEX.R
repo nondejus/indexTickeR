@@ -40,7 +40,7 @@ get_AEX <- function(do.cache = TRUE,
 
     df.AEX <- df.AEX[[1]]
 
-    colnames(df.AEX) <- c('company','ICB.sector','ticker','index_weight_percent')
+    colnames(df.AEX) <- c('company','ICB.sector','ticker','index_weight')
 
     if (do.cache) {
         saveRDS(df.AEX, cache.file)

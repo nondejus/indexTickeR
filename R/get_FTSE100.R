@@ -9,10 +9,10 @@
 #' @import rvest
 #' @examples
 #' \dontrun{
-#' df.FTSE100 <- GetFTSE100Stocks()
+#' df.FTSE100 <- get_FTSE100()
 #' print(df.FTSE100$tickers)
 #' }
-GetFTSE100Stocks <- function(do.cache = TRUE,
+get_FTSE100 <- function(do.cache = TRUE,
                              cache.folder = 'BGS_Cache'){
 
   if (do.cache) {
@@ -24,8 +24,8 @@ GetFTSE100Stocks <- function(do.cache = TRUE,
     flag <- file.exists(cache.file)
 
     if (flag) {
-      df.FTSE100Stocks <- readRDS(cache.file)
-      return(df.FTSE100Stocks)
+      df.FTSE100 <- readRDS(cache.file)
+      return(df.FTSE100)
     }
   }
 
@@ -34,18 +34,18 @@ GetFTSE100Stocks <- function(do.cache = TRUE,
   read_html <- 0 # fix for global variable nagging from BUILD
   my.xpath <- '//*[@id="mw-content-text"]/div/table[2]' # old xpath
   my.xpath <- '//*[@id="constituents"]'
-  df.FTSE100Stocks <- my.url %>%
+  df.FTSE100 <- my.url %>%
     read_html() %>%
     html_nodes(xpath = my.xpath) %>%
     html_table()
 
-  df.FTSE100Stocks <- df.FTSE100Stocks[[1]]
+  df.FTSE100 <- df.FTSE100[[1]]
 
-  colnames(df.FTSE100Stocks) <- c('company','tickers','ICB.sector')
+  colnames(df.FTSE100) <- c('company','tickers','ICB.sector')
 
   if (do.cache) {
-    saveRDS(df.FTSE100Stocks, cache.file)
+    saveRDS(df.FTSE100, cache.file)
   }
 
-  return(df.FTSE100Stocks)
+  return(df.FTSE100)
 }
