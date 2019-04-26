@@ -15,9 +15,11 @@
 GetFTSE100Stocks <- function(do.cache = TRUE,
                              cache.folder = 'BGS_Cache'){
 
-  cache.file <- file.path(cache.folder, paste0('FTSE100_Composition_', Sys.Date(), '.rds') )
-
   if (do.cache) {
+    # check if cache folder exists, create if not
+    ifelse(!dir.exists(cache.folder), dir.create(file.path(cache.folder)),'')
+    cache.file <- file.path(cache.folder, paste0('FTSE100_Composition_', Sys.Date(), '.rds') )
+
     # check if file exists
     flag <- file.exists(cache.file)
 
