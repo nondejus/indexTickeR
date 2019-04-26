@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 ^indextickeR\.Rproj$
+=======
+^.*\.Rproj$
+>>>>>>> develop
 ^\.Rproj\.user$
