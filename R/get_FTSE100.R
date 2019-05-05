@@ -41,7 +41,7 @@ get_FTSE100 <- function(do.cache = TRUE,
 
   df.FTSE100 <- df.FTSE100[[1]]
 
-  colnames(df.FTSE100) <- c('company','tickers','ICB.sector')
+  colnames(df.FTSE100) <- c('company','ticker','ICB.sector')
 
   if (do.cache) {
     saveRDS(df.FTSE100, cache.file)
